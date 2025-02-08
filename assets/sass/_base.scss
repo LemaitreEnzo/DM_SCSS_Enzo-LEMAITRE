@@ -1,0 +1,27 @@
+@use './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+
+body {
+    font-family: variables.$font-stack;
+    color: variables.$font-color;
+    background-color: variables.$background-color;
+}
+
+hr{
+    width: 80px;
+    height: 6px;
+    background-color: #EB4747;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    border-radius: 25px;
+}
