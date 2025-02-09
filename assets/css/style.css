@@ -32,6 +32,28 @@ body.dark {
   color: var(--font-color);
 }
 
+.underline {
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+.underline:before {
+  display: block;
+  content: "";
+  position: absolute;
+  background-color: var(--font-color);
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.underline:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
 .header {
   background-color: var(--primary-color);
   color: #fff;
@@ -39,18 +61,11 @@ body.dark {
 }
 .header__nav__list {
   list-style: none;
-  padding: 0;
+  display: flex;
 }
 .header__nav__list__item {
   display: inline;
   margin-right: 15px;
-}
-.header__nav__list__item a {
-  color: #fff;
-  text-decoration: none;
-}
-.header__nav__list__item a:hover {
-  text-decoration: underline;
 }
 .header__menuIcon {
   display: none;
@@ -93,6 +108,10 @@ main .home__description img {
   max-width: 100%;
   height: auto;
 }
+main .home__description a {
+  font-size: 1em;
+  color: var(--font-color);
+}
 main .skills__title {
   display: flex;
   justify-content: center;
@@ -105,12 +124,153 @@ main .skills__container {
   flex-wrap: wrap;
   align-items: center;
 }
-main .skills__container a img,
-main .skills__container a svg {
+main .skills__container #python {
+  text-align: center;
+  width: 120px;
+}
+main .skills__container #python .progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+}
+main .skills__container #python .progress-bar .progress {
+  width: 90%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+main .skills__container #java {
+  text-align: center;
+  width: 120px;
+}
+main .skills__container #java .progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+}
+main .skills__container #java .progress-bar .progress {
+  width: 40%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+main .skills__container #html {
+  text-align: center;
+  width: 120px;
+}
+main .skills__container #html .progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+}
+main .skills__container #html .progress-bar .progress {
+  width: 80%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+main .skills__container #css {
+  text-align: center;
+  width: 120px;
+}
+main .skills__container #css .progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+}
+main .skills__container #css .progress-bar .progress {
+  width: 80%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+main .skills__container #figma {
+  text-align: center;
+  width: 120px;
+}
+main .skills__container #figma .progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+}
+main .skills__container #figma .progress-bar .progress {
+  width: 20%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+main .skills__container #git {
+  text-align: center;
+  width: 120px;
+}
+main .skills__container #git .progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+}
+main .skills__container #git .progress-bar .progress {
+  width: 55%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+main .skills__container #linux {
+  text-align: center;
+  width: 120px;
+}
+main .skills__container #linux .progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+}
+main .skills__container #linux .progress-bar .progress {
+  width: 60%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+main .skills__container #CSharp {
+  text-align: center;
+  width: 120px;
+}
+main .skills__container #CSharp .progress-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+}
+main .skills__container #CSharp .progress-bar .progress {
+  width: 55%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+main .skills__container__skill {
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 15px;
+}
+main .skills__container__skill a img,
+main .skills__container__skill a svg {
   width: 60px;
   height: 65px;
 }
-main .skills__container a ion-icon {
+main .skills__container__skill a ion-icon {
   font-size: 60px;
   color: #000;
 }
@@ -163,43 +323,32 @@ main .contact__title {
   justify-content: center;
   align-items: center;
 }
-main .contact__form {
+main .contact__description {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  margin-top: 5%;
 }
-main .contact__form label {
-  font-weight: bold;
-  margin-bottom: 5px;
+main .contact__description ion-icon {
+  font-size: 16px;
+  color: var(--font-color);
 }
-main .contact__form input,
-main .contact__form textarea {
-  padding: 15px;
-  border: 1px solid color-mix(in srgb, var(--primary-color) 80%, black);
-  border-radius: 5px;
+main .contact__description img {
+  width: 16px;
+}
+main .contact__description a {
   font-size: 1em;
+  color: var(--font-color);
 }
-main .contact__form button {
-  background-color: var(--secondary-color);
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1em;
-  cursor: pointer;
-}
-main .contact__form button:hover {
-  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
+main .contact__description .icon:hover {
+  background-color: color-mix(in srgb, var(--primary-color) 80%, white);
   transition: 0.3s ease-in;
-}
-main .contact__form button:hover {
-  background-color: color-mix(in srgb, var(--secondary-color) 90%, black);
 }
 
 footer {
-  margin-top: 10%;
+  margin-top: 3%;
   text-align: center;
   padding: 15px;
   background-color: var(--primary-color);

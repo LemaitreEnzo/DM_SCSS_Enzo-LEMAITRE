@@ -11,20 +11,11 @@
     &__nav {
         &__list {
             list-style: none;
-            padding: 0;
+            display: flex;
 
             &__item {
                 display: inline;
                 margin-right: variables.$margin;
-
-                a {
-                    color: #fff;
-                    text-decoration: none;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
             }
         }
     }
@@ -81,6 +72,10 @@ main {
                 max-width: 100%;
                 height: auto;
             }
+            a {
+                font-size: 1em;
+                color: var(--font-color);
+            }
         }
     }
 
@@ -97,20 +92,59 @@ main {
             flex-wrap: wrap;
             align-items: center;
 
-            a {
+            #python {
+                @include mixins.progress-bar(var(--secondary-color), 90%);
+            }
 
-                img,
-                svg {
-                    width: 60px;
-                    height: 65px;
-                }
+            #java {
+                @include mixins.progress-bar(var(--secondary-color), 40%);
+            }
 
-                ion-icon {
-                    font-size: 60px;
-                    color: #000;
+            #html {
+                @include mixins.progress-bar(var(--secondary-color), 80%);
+            }
+
+            #css {
+                @include mixins.progress-bar(var(--secondary-color), 80%);
+            }
+
+            #figma {
+                @include mixins.progress-bar(var(--secondary-color), 20%);
+            }
+
+            #git {
+                @include mixins.progress-bar(var(--secondary-color), 55%);
+            }
+
+            #linux {
+                @include mixins.progress-bar(var(--secondary-color), 60%);
+            }
+
+            #CSharp {
+                @include mixins.progress-bar(var(--secondary-color), 55%);
+            }
+
+            &__skill {
+                border: 2px solid var(--primary-color);
+                border-radius: 5px;
+                padding: variables.$padding;
+
+                a {
+
+                    img,
+                    svg {
+                        width: 60px;
+                        height: 65px;
+                    }
+
+                    ion-icon {
+                        font-size: 60px;
+                        color: #000;
+                    }
                 }
             }
         }
+
     }
 
     .projects {
@@ -141,6 +175,7 @@ main {
                 p {
                     margin: 0 0 1rem 0;
                 }
+
             }
         }
 
@@ -157,39 +192,38 @@ main {
             @include mixins.flex-center;
         }
 
-        &__form {
-            display: flex;
+        &__description {
+            @include mixins.flex-center;
             flex-direction: column;
-            gap: variables.$margin;
+            gap: 20px;
+            margin-top: 5%;
 
-            label {
-                font-weight: bold;
-                margin-bottom: 5px;
+            ion-icon {
+                font-size: 16px;
+                color: var(--font-color);
             }
 
-            input,
-            textarea {
-                padding: variables.$padding;
-                border: 1px solid color-mix(in srgb, var(--primary-color) 80%, black);
-                border-radius: 5px;
-                font-size: 1em;
+            img {
+                width: 16px;
             }
 
-            button {
-                @include mixins.button(var(--secondary-color));
+            a {
                 font-size: 1em;
-                cursor: pointer;
+                color: var(--font-color);
+            }
 
-                &:hover {
-                    background-color:  color-mix(in srgb, var(--secondary-color) 90%, black);
-                }
+            .icon:hover {
+                background-color: color-mix(in srgb, var(--primary-color) 80%, white);
+                transition: 0.3s ease-in;
             }
         }
+
+
     }
 }
 
 footer {
-    margin-top: 10%;
+    margin-top: 3%;
     text-align: center;
     padding: variables.$padding;
     background-color: var(--primary-color);
