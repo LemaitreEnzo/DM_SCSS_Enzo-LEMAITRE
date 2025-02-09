@@ -1,8 +1,10 @@
 @use './variables';
-@use './minxins';
+@use './mixins';
+@use './themes';
+
 
 .header {
-    background-color: variables.$primary-color;
+    background-color: var(--primary-color);
     color: #fff;
     padding: variables.$padding;
 
@@ -37,7 +39,7 @@
                 width: 25px;
                 height: 3px;
                 margin: 5px auto;
-                background-color: variables.$secondary-color;
+                background-color: var(--secondary-color);
                 transition: all 0.3s ease-in-out;
             }
 
@@ -64,9 +66,11 @@ main {
     .home {
         margin-top: 5%;
         margin-bottom: 5%;
+
         &__title {
-            @include minxins.flex-center;
+            @include mixins.flex-center;
         }
+
         &__description {
             margin-left: 3%;
             display: flex;
@@ -81,11 +85,11 @@ main {
     }
 
     .skills {
-        
+
         &__title {
-            @include minxins.flex-center; 
+            @include mixins.flex-center;
         }
-        
+
         &__container {
             margin: 5% 0;
             display: flex;
@@ -94,13 +98,16 @@ main {
             align-items: center;
 
             a {
-                img, svg {
+
+                img,
+                svg {
                     width: 60px;
                     height: 65px;
                 }
 
                 ion-icon {
                     font-size: 60px;
+                    color: #000;
                 }
             }
         }
@@ -108,9 +115,9 @@ main {
 
     .projects {
         &__title {
-            @include minxins.flex-center;
+            @include mixins.flex-center;
         }
-        
+
         &__container {
             margin-top: 3%;
             margin-bottom: 10%;
@@ -118,18 +125,19 @@ main {
             justify-content: space-around;
             flex: 1;
             flex-wrap: wrap;
-            
+
             &__card {
                 text-align: center;
                 width: 250px;
                 height: 350px;
                 overflow: hidden;
-                
+
                 .img-projects {
                     width: 100%;
                     height: 250px;
                     object-fit: cover;
                 }
+
                 p {
                     margin: 0 0 1rem 0;
                 }
@@ -137,53 +145,53 @@ main {
         }
 
         a {
-            @include minxins.button(variables.$secondary-color);
+            @include mixins.button(var(--secondary-color));
         }
     }
 
     .contact {
         padding: variables.$padding;
         margin: variables.$margin 0;
-    
+
         &__title {
-            @include minxins.flex-center;
+            @include mixins.flex-center;
         }
-    
+
         &__form {
             display: flex;
             flex-direction: column;
             gap: variables.$margin;
-    
+
             label {
                 font-weight: bold;
                 margin-bottom: 5px;
             }
-    
-            input, textarea {
+
+            input,
+            textarea {
                 padding: variables.$padding;
-                border: 1px solid darken(variables.$primary-color, 20%);
+                border: 1px solid color-mix(in srgb, var(--primary-color) 80%, black);
                 border-radius: 5px;
                 font-size: 1em;
             }
-    
+
             button {
-                @include minxins.button(variables.$secondary-color);
+                @include mixins.button(var(--secondary-color));
                 font-size: 1em;
                 cursor: pointer;
-    
+
                 &:hover {
-                    background-color: darken(variables.$secondary-color, 10%);
+                    background-color:  color-mix(in srgb, var(--secondary-color) 90%, black);
                 }
             }
         }
-    }   
+    }
 }
 
 footer {
     margin-top: 10%;
     text-align: center;
     padding: variables.$padding;
-    background-color: variables.$primary-color;
+    background-color: var(--primary-color);
     color: #fff;
 }
-

@@ -6,9 +6,10 @@
 }
 
 body {
-  font-family: Helvetica, sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-color: #333;
+  --background-color: #f9f9f9;
 }
 
 hr {
@@ -22,8 +23,17 @@ hr {
   border-radius: 25px;
 }
 
+body.dark {
+  --primary-color: #2c3e50;
+  --secondary-color: #27ae60;
+  --font-color: #f9f9f9;
+  --background-color: #333;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
 .header {
-  background-color: #3498db;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 15px;
 }
@@ -51,7 +61,7 @@ hr {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background-color: #2ecc71;
+  background-color: var(--secondary-color);
   transition: all 0.3s ease-in-out;
 }
 .header__menuIcon .hamburger-icon.open span:nth-child(1) {
@@ -95,12 +105,14 @@ main .skills__container {
   flex-wrap: wrap;
   align-items: center;
 }
-main .skills__container a img, main .skills__container a svg {
+main .skills__container a img,
+main .skills__container a svg {
   width: 60px;
   height: 65px;
 }
 main .skills__container a ion-icon {
   font-size: 60px;
+  color: #000;
 }
 main .projects__title {
   display: flex;
@@ -130,7 +142,7 @@ main .projects__container__card p {
   margin: 0 0 1rem 0;
 }
 main .projects a {
-  background-color: #2ecc71;
+  background-color: var(--secondary-color);
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -139,7 +151,7 @@ main .projects a {
   text-decoration: none;
 }
 main .projects a:hover {
-  background-color: rgb(36.616, 162.384, 89.948);
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
   transition: 0.3s ease-in;
 }
 main .contact {
@@ -160,14 +172,15 @@ main .contact__form label {
   font-weight: bold;
   margin-bottom: 5px;
 }
-main .contact__form input, main .contact__form textarea {
+main .contact__form input,
+main .contact__form textarea {
   padding: 15px;
-  border: 1px solid rgb(25.4560669456, 96.1673640167, 143.5439330544);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 80%, black);
   border-radius: 5px;
   font-size: 1em;
 }
 main .contact__form button {
-  background-color: #2ecc71;
+  background-color: var(--secondary-color);
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -178,18 +191,18 @@ main .contact__form button {
   cursor: pointer;
 }
 main .contact__form button:hover {
-  background-color: rgb(36.616, 162.384, 89.948);
+  background-color: color-mix(in srgb, var(--secondary-color) 80%, black);
   transition: 0.3s ease-in;
 }
 main .contact__form button:hover {
-  background-color: rgb(36.616, 162.384, 89.948);
+  background-color: color-mix(in srgb, var(--secondary-color) 90%, black);
 }
 
 footer {
   margin-top: 10%;
   text-align: center;
   padding: 15px;
-  background-color: #3498db;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
