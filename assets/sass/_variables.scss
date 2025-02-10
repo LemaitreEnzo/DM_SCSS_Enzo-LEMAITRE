@@ -1,18 +1,26 @@
 // Couleurs claires
-$light-primary-color: #3498db;
-$light-secondary-color: #2ecc71;
+$light-primary-color: #f06449;
+$light-secondary-color: #1c1d25;
 $light-font-color: #333;
 $light-background-color: #f9f9f9;
 
 // Couleurs sombres
-$dark-primary-color: #2c3e50;
-$dark-secondary-color: #27ae60;
+$dark-primary-color: #27ae60;
+$dark-secondary-color: #2c3e50;
 $dark-font-color: #f9f9f9;
 $dark-background-color: #333;
 
 
 // Polices
-$font-stack: Helvetica, sans-serif;
+
+@font-face {
+    font-family: LibreBaskerville-Regular;
+    src: url(../fonts/LibreBaskerville-Regular.eot);
+    src: url(../fonts/LibreBaskerville-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/LibreBaskerville-Regular.woff) format("woff"), url(../fonts/LibreBaskerville-Regular.ttf) format("truetype"), url(../fonts/LibreBaskerville-Regular.svg#league_spartanbold) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+$font-stack: LibreBaskerville-Regular, Palatino Linotype, Times New Roman, serif;
 
 // Espacements
 $padding: 15px;

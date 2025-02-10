@@ -1,0 +1,93 @@
+@use '../variables';
+@use '../mixins';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal {
+        border: 2px solid var(--primary-color);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+        animation: fadeIn 0.3s ease-in-out;
+        
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .about {
+            padding: 10%;
+            font-family: Nunito Sans;
+
+            h2 {
+                margin-bottom: 10px;
+            }
+
+            &__info {
+                h3 {
+                    font-weight: 300;
+                    margin-bottom: 2%;
+                }
+
+                &__description {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin-bottom: 15px;
+                    font-family: Nunito Sans;
+
+                    strong {
+                        color: var(--primary-color);
+
+                        a {
+                            font-size: var(--font-size);
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+
+            #cv {
+                @include mixins.button(var(--primary-color));
+                display: block;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -31,21 +31,16 @@
 
     <main>
         <section class="home" id="home">
-            <h2 class="home__title">À propos de moi</h2>
             <div class="home__description">
                 <img src="assets/img/moi.png" alt="Photo de moi">
-                <p>
-                    Je suis Enzo LEMAITRE, j'ai 19 ans. Je suis actuellement en deuxième année de bachelor
-                    <strong>Chef
-                        de projet Développement & IA</strong> à
-                    <strong><a href="https://lamanu.fr/campus/compiegne/" target="_blank" class="underline">LA MANU</a></strong> à
-                    Compiègne.
-                    J'aimerai devenir <u>développeur Full Stack</u> ou <u>développeur de jeux vidéos</u>. <br>
-                    J'aime <strong>travailler</strong> sur des <strong>sujets complexes</strong> afin
-                    d'améliorer mes
-                    compétences. <br>
-                    Quand je ne code pas j'aime jouer aux jeux videos.
-                </p>
+                <div class="home__description__text">
+                    <h1>Enzo LEMAITRE</h1>
+                    <h2>ÉTUDIANT EN DÉVELOPPEMENT WEB & APPLICATION</h2>
+                    <div class="home__description__text__button">
+                        <a href="#" class="the-button" id="modal">À propos de moi<ion-icon
+                                name="arrow-forward-outline"></ion-icon></a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -225,11 +220,42 @@
             <h2 class="contact__title">Contactez-moi</h2>
             <hr>
             <div class="contact__description">
-                <p>Pour me contacter, vous pouvez utiliser mon adresse <a href="mailto:lemaitreenzo05@gmail.com" target="_blank" class="underline">e-mail</a> ou me téléphoner avec mon numéro de téléphone
+                <p>Pour me contacter, vous pouvez utiliser mon adresse <a href="mailto:lemaitreenzo05@gmail.com"
+                        target="_blank" class="underline">e-mail</a> ou me téléphoner avec mon numéro de téléphone
                     : <a href="tel:0699417519" target="_blank" class="underline">06 99 41 75 19</a>.</p>
-                <p>Vous pouvez me retrouver aussi sur <a href="https://www.linkedin.com/in/enzo-lemaitre-55069b29b/" target="_blank"><ion-icon name="logo-linkedin" class="icon"></ion-icon></a> ou <a href="https://github.com/LemaitreEnzo/" target="_blank"><ion-icon name="logo-github" class="icon"></ion-icon></a>.</p>
+                <p>Vous pouvez me retrouver aussi sur <a href="https://www.linkedin.com/in/enzo-lemaitre-55069b29b/"
+                        target="_blank"><ion-icon name="logo-linkedin" class="icon"></ion-icon></a> ou <a
+                        href="https://github.com/LemaitreEnzo/" target="_blank"><ion-icon name="logo-github"
+                            class="icon"></ion-icon></a>.</p>
             </div>
         </section>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <button class="modal-close">&times;</button>
+                <div class="about">
+                    <h2>À propos de moi</h2>
+                    <div class="about__info">
+                        <h3>Étudiant en Développement web.</h3>
+                        <p class="about__info__description">
+                            Je suis Enzo LEMAITRE, j'ai 19 ans. Je suis actuellement en deuxième année de bachelor
+                            <strong>Chef
+                                de projet Développement & IA</strong> à
+                            <strong><a href="https://lamanu.fr/campus/compiegne/" target="_blank" class="underline">LA MANU</a></strong> à
+                            Compiègne.
+                            J'aimerai devenir <u>développeur Full Stack</u> ou <u>développeur de jeux vidéos</u>. <br>
+                            J'aime <strong>travailler</strong> sur des <strong>sujets complexes</strong> afin
+                            d'améliorer mes
+                            compétences. <br>
+                            Quand je ne code pas j'aime jouer aux jeux videos. Je suis actuellement à la recherche d'un
+                            <strong>stage</strong> et d'une <strong>alternance</strong>.
+                        </p>
+                        <a href="assets/pdf/cv-Enzo_Lemaitre.pdf" target="_blank" rel="noopener noreferrer" id="cv">Voir
+                            mon CV papier</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
